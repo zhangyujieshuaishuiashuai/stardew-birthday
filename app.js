@@ -17,24 +17,24 @@ const storyTimeline = [
 
 const galleryList = [
     // ... (请保持你之前的完整 galleryList 数据，这里省略) ...
-    { type: "video", src: "051541c450521edc692e52c9362dea3e.MP4", thumb: "IMG_1630.jpg", title: "💍 笨蛋求婚", caption: "笑场现场记录" },
-    { type: "image", src: "dd255bb9577e79c837c38198b071c427.jpg", thumb: "dd255bb9577e79c837c38198b071c427.jpg", title: "🎂 生日快乐" },
-    { type: "image", src: "IMG_1720.jpg", thumb: "IMG_1720.jpg", title: "🤠 草原显眼包" },
-    { type: "image", src: "IMG_0111.jpg", thumb: "IMG_0111.jpg", title: "🏰 索菲亚之夜" },
-    { type: "image", src: "IMG_0094.jpg", thumb: "IMG_0094.jpg", title: "🏢 延吉网红墙" },
-    { type: "image", src: "IMG_1706.jpg", thumb: "IMG_1706.jpg", title: "🍔 吃货二人组" },
-    { type: "image", src: "IMG_1630.jpg", thumb: "IMG_1630.jpg", title: "🤪 贴脸搞怪" },
-    { type: "image", src: "IMG_0106.jpg", thumb: "IMG_0106.jpg", title: "🥖 烟囱面包" },
-    { type: "image", src: "7cc58758c70cfc2cf782c499ab83733c.jpg", thumb: "7cc58758c70cfc2cf782c499ab83733c.jpg", title: "🌴 绿野仙踪" },
-    { type: "image", src: "IMG_1705.jpg", thumb: "IMG_1705.jpg", title: "☁️ 暮色屋檐" },
-    { type: "image", src: "IMG_6396.jpg", thumb: "IMG_6396.jpg", title: "🌙 依偎" },
-    { type: "image", src: "ad4021b36efebd298348c46aff6682ca.jpg", thumb: "ad4021b36efebd298348c46aff6682ca.jpg", title: "✌️ 游客打卡" },
+    { type: "video", src: "051541c450521edc692e52c9362dea3e.MP4", thumb: "IMG_1630.JPG", title: "💍 笨蛋求婚", caption: "笑场现场记录" },
+    { type: "image", src: "dd255bb9577e79c837c38198b071c427.JPG", thumb: "dd255bb9577e79c837c38198b071c427.JPG", title: "🎂 生日快乐" },
+    { type: "image", src: "IMG_1720.JPG", thumb: "IMG_1720.JPG", title: "🤠 草原显眼包" },
+    { type: "image", src: "IMG_0111.JPG", thumb: "IMG_0111.JPG", title: "🏰 索菲亚之夜" },
+    { type: "image", src: "IMG_0094.JPG", thumb: "IMG_0094.JPG", title: "🏢 延吉网红墙" },
+    { type: "image", src: "IMG_1706.JPG", thumb: "IMG_1706.JPG", title: "🍔 吃货二人组" },
+    { type: "image", src: "IMG_1630.JPG", thumb: "IMG_1630.JPG", title: "🤪 贴脸搞怪" },
+    { type: "image", src: "IMG_0106.JPG", thumb: "IMG_0106.JPG", title: "🥖 烟囱面包" },
+    { type: "image", src: "7cc58758c70cfc2cf782c499ab83733c.JPG", thumb: "7cc58758c70cfc2cf782c499ab83733c.JPG", title: "🌴 绿野仙踪" },
+    { type: "image", src: "IMG_1705.JPG", thumb: "IMG_1705.JPG", title: "☁️ 暮色屋檐" },
+    { type: "image", src: "IMG_6396.JPG", thumb: "IMG_6396.JPG", title: "🌙 依偎" },
+    { type: "image", src: "ad4021b36efebd298348c46aff6682ca.JPG", thumb: "ad4021b36efebd298348c46aff6682ca.JPG", title: "✌️ 游客打卡" },
     { type: "image", src: "08f6774600d56dfd73a4fe5bfc130c1c.JPG", thumb: "08f6774600d56dfd73a4fe5bfc130c1c.JPG", title: "😁 你的笑眼" },
     { type: "image", src: "3a1ad3336d9ad992a6165f76380c5716.JPG", thumb: "3a1ad3336d9ad992a6165f76380c5716.JPG", title: "📸 假笑男孩" },
     { type: "image", src: "faa0068cc1839e5a3681eda5edd8de4a.JPG", thumb: "faa0068cc1839e5a3681eda5edd8de4a.JPG", title: "👀 呆萌凝视" },
-    { type: "image", src: "dclassic 2024-09-02 193701.614.jpg", thumb: "dclassic 2024-09-02 193701.614.jpg", title: "🚗 在路上" },
-    { type: "image", src: "IMG_1629.jpg", thumb: "IMG_1629.jpg", title: "🏙️ 九龙广场" },
-    { type: "image", src: "IMG_0347.jpg", thumb: "IMG_0347.jpg", title: "🕊️ 湖边海鸥" },
+    { type: "image", src: "dclassic 2024-09-02 193701.614.JPG", thumb: "dclassic 2024-09-02 193701.614.JPG", title: "🚗 在路上" },
+    { type: "image", src: "IMG_1629.JPG", thumb: "IMG_1629.JPG", title: "🏙️ 九龙广场" },
+    { type: "image", src: "IMG_0347.JPG", thumb: "IMG_0347.JPG", title: "🕊️ 湖边海鸥" },
     { type: "image", src: "first.png", thumb: "first.png", title: "💌 故事开始" },
     { type: "image", src: "Internet.jpeg", thumb: "Internet.jpeg", title: "🎮 网吧定情" },
     { type: "image", src: "walk.jpeg", thumb: "walk.jpeg", title: "🌙 月下漫步" },
@@ -80,7 +80,28 @@ let isTyping = false;
 let typeTimer = null;
 let isStoryFinished = false;
 
+/* --- 移动端尺寸适配：修复 100vh 在 iOS/安卓浏览器的抖动与遮挡 --- */
+function updateViewportVars() {
+    // 1) 用 innerHeight 计算真实可视高度
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // 2) 动态写入 header 高度，避免不同机型/字体导致遮挡
+    const header = document.querySelector('.header-bar');
+    if (header) {
+        const h = Math.round(header.getBoundingClientRect().height);
+        if (h > 0) document.documentElement.style.setProperty('--header-h', `${h}px`);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    updateViewportVars();
+    // 旋转屏/地址栏收起展开都会触发 resize，延迟一次更稳
+    window.addEventListener('resize', () => {
+        updateViewportVars();
+        setTimeout(updateViewportVars, 150);
+    }, { passive: true });
+
     initGallery();
     initMusic();
     initModeSwitch();
@@ -103,8 +124,8 @@ function initModeSwitch() {
             els.galleryView.classList.remove('hidden');
             els.modeBtn.innerText = "📖 返回故事";
             
-            // 切换到 E l'Alba Verrà .mp3
-            switchMusic("E l'Alba Verrà .mp3");
+            // 切换到画廊背景音乐
+            switchMusic("E_lAlba_Verra.mp3");
         }
     };
 }
