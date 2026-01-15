@@ -6,42 +6,45 @@ const CONFIG = {
 
 // ... (数据部分省略，请直接使用你之前的完整数据，这里只展示修改的逻辑部分) ...
 const storyTimeline = [
-    { date: "2022年3月末", img: "first.png", question: "我们最开始是怎么认识的？你还差点让我错过什么？", hint: "关键词：共同好友 / 好友申请", answer: "我是从我们俩共同好友那里认识你的。刚认识的时候你甚至都没有通过我好友申请，让我一番好等，差点就错过你啦。" },
-    { date: "2022年4月2号", img: "Internet.jpeg", question: "我们是哪天、在什么情况下“误打误撞”地在一起的？", hint: "关键词：网吧 / 猪咪咪 / 高考压力", answer: "4月2号那天晚上，我和猪咪咪（姐姐）两口子去上网。那晚我们聊到了你以前遇到的人，也是在那个时候，在高考压力下我们就在一起啦，误打误撞又恰恰很对。", speaker: "猪唧唧" },
-    { date: "2022年4月末", img: "walk.jpeg", question: "我们第一次见面那晚，你是怎么“偷偷下楼”的？我们最后做了什么？", hint: "关键词：宵禁 / 买小零食当借口 / 月光 / 牵手半小时", answer: "那天是周五，四月末风微微凉，我穿着卫衣到你家楼下来找你。你因为宵禁只能和嘎嘎娃儿说下楼买小零食，还把陈露拉着一起打掩护。你画了美美的妆，月光洒在你脸上美得我愣神。我们没有拘谨，反而安心放松，牵着手在你家小区楼下逛了半个小时，那是最幸福的半小时。", speaker: "猪唧唧" },
-    { date: "2022年6月 & 10月", img: "gk.jpeg", question: "高考那会儿我们心态是怎样的？后来我们怎么维持见面频率的？", hint: "关键词：天意 / 重庆-绵阳 / 一月一面 / 3小时高铁", answer: "我们高考时都没有太紧张，觉得考得怎么样都是天意，直到成绩出来两个人才松口气。虽然不在一个城市，你在重庆我在绵阳，但我们还是保持一月一面持续了三年。你每次从重庆坐3个小时高铁过来，我都好担心你。国庆我第一次来重庆找你，天天粘在一起，10月份重庆巨热，我们还去做核酸。", speaker: "猪唧唧" },
-    { date: "2024年1月", img: "db.jpeg", question: "我们第一次出去玩去的哪里？进房间后为什么傻眼？回成都发生了什么惊险事？", hint: "关键词：东北/雪很厚/屋里太热/没去长白山/差点赶不上飞机", answer: "2024年1月，我们去东北。南方人的我们出发前太激动，到地方看到雪很厚开心死了，但进房间傻眼：太热了，脸红得像烧起来。我们去了长春伪满皇宫、冰雪大世界。最遗憾是我没提前买票没去成长白山。我们还去了延吉吃烧烤，坐绿皮火车去哈尔滨。回成都的时候还差点没坐上飞机，幸好飞机晚点，老天眷顾。", speaker: "猪唧唧" },
-    { date: "2024年8月", img: "lijiang.jpeg", question: "丽江那次爬玉龙雪山发生了什么？后来你怎么了，我又做了什么？", hint: "关键词：好酒店/前一晚喝酒/被宰600/连夜医院", answer: "2024年8月，我们去了丽江玩，住了一个很好的酒店。爬玉龙雪山时，因为我前一天晚上喝了酒，我们被“牦牛”宰了，装备花了600多。我还在排队时被乱挤气到怒吼。后来你感冒了，我心疼死，连夜带你去医院检查，还遇到蘑菇中毒的可怜人。", speaker: "猪唧唧" },
-    { date: "2025年 - 未来", img: "ky.jpeg", question: "2025年我们主要在干嘛？我最累的时候你做了什么把我吓到但也感动到？", hint: "关键词：自习室暑假/晒太阳/实习很累/重庆回来惊喜/2026新生活", answer: "2025年我们奋力准备考研，在自习室泡了一个暑假。你很焦虑，我总是偷懒拉你出去晒太阳、看电影。我还去实习，那段时间真的很累，你还专门从重庆回来给我惊喜陪我，真的把我吓死但也特别感动。考完之后一切都过去了，2026等着我们的是新的生活，我们可以一起继续走下去。", speaker: "猪唧唧" }
+    { date: "2022年3月末", img: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/first.png", question: "我们最开始是怎么认识的？你还差点让我错过什么？", hint: "关键词：共同好友 / 好友申请", answer: "我是从我们俩共同好友那里认识你的。刚认识的时候你甚至都没有通过我好友申请，让我一番好等，差点就错过你啦。" },
+    { date: "2022年4月2号", img: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/Internet.jpeg", question: "我们是哪天、在什么情况下“误打误撞”地在一起的？", hint: "关键词：网吧 / 猪咪咪 / 高考压力", answer: "4月2号那天晚上，我和猪咪咪（姐姐）两口子去上网。那晚我们聊到了你以前遇到的人，也是在那个时候，在高考压力下我们就在一起啦，误打误撞又恰恰很对。", speaker: "猪唧唧" },
+    { date: "2022年4月末", img: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/walk.jpeg", question: "我们第一次见面那晚，你是怎么“偷偷下楼”的？我们最后做了什么？", hint: "关键词：宵禁 / 买小零食当借口 / 月光 / 牵手半小时", answer: "那天是周五，四月末风微微凉，我穿着卫衣到你家楼下来找你。你因为宵禁只能和嘎嘎娃儿说下楼买小零食，还把陈露拉着一起打掩护。你画了美美的妆，月光洒在你脸上美得我愣神。我们没有拘谨，反而安心放松，牵着手在你家小区楼下逛了半个小时，那是最幸福的半小时。", speaker: "猪唧唧" },
+    { date: "2022年6月 & 10月", img: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/gk.jpeg", question: "高考那会儿我们心态是怎样的？后来我们怎么维持见面频率的？", hint: "关键词：天意 / 重庆-绵阳 / 一月一面 / 3小时高铁", answer: "我们高考时都没有太紧张，觉得考得怎么样都是天意，直到成绩出来两个人才松口气。虽然不在一个城市，你在重庆我在绵阳，但我们还是保持一月一面持续了三年。你每次从重庆坐3个小时高铁过来，我都好担心你。国庆我第一次来重庆找你，天天粘在一起，10月份重庆巨热，我们还去做核酸。", speaker: "猪唧唧" },
+    { date: "2024年1月", img: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/db.jpeg", question: "我们第一次出去玩去的哪里？进房间后为什么傻眼？回成都发生了什么惊险事？", hint: "关键词：东北/雪很厚/屋里太热/没去长白山/差点赶不上飞机", answer: "2024年1月，我们去东北。南方人的我们出发前太激动，到地方看到雪很厚开心死了，但进房间傻眼：太热了，脸红得像烧起来。我们去了长春伪满皇宫、冰雪大世界。最遗憾是我没提前买票没去成长白山。我们还去了延吉吃烧烤，坐绿皮火车去哈尔滨。回成都的时候还差点没坐上飞机，幸好飞机晚点，老天眷顾。", speaker: "猪唧唧" },
+    { date: "2024年8月", img: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/lijiang.jpeg", question: "丽江那次爬玉龙雪山发生了什么？后来你怎么了，我又做了什么？", hint: "关键词：好酒店/前一晚喝酒/被宰600/连夜医院", answer: "2024年8月，我们去了丽江玩，住了一个很好的酒店。爬玉龙雪山时，因为我前一天晚上喝了酒，我们被“牦牛”宰了，装备花了600多。我还在排队时被乱挤气到怒吼。后来你感冒了，我心疼死，连夜带你去医院检查，还遇到蘑菇中毒的可怜人。", speaker: "猪唧唧" },
+    { date: "2025年 - 未来", img: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/ky.jpeg", question: "2025年我们主要在干嘛？我最累的时候你做了什么把我吓到但也感动到？", hint: "关键词：自习室暑假/晒太阳/实习很累/重庆回来惊喜/2026新生活", answer: "2025年我们奋力准备考研，在自习室泡了一个暑假。你很焦虑，我总是偷懒拉你出去晒太阳、看电影。我还去实习，那段时间真的很累，你还专门从重庆回来给我惊喜陪我，真的把我吓死但也特别感动。考完之后一切都过去了，2026等着我们的是新的生活，我们可以一起继续走下去。", speaker: "猪唧唧" }
 ];
 
 const galleryList = [
     // ... (请保持你之前的完整 galleryList 数据，这里省略) ...
-    { type: "video", src: "051541c450521edc692e52c9362dea3e.MP4", thumb: "IMG_1630.JPG", title: "💍 笨蛋求婚", caption: "笑场现场记录" },
-    { type: "image", src: "dd255bb9577e79c837c38198b071c427.JPG", thumb: "dd255bb9577e79c837c38198b071c427.JPG", title: "🎂 生日快乐" },
-    { type: "image", src: "IMG_1720.JPG", thumb: "IMG_1720.JPG", title: "🤠 草原显眼包" },
-    { type: "image", src: "IMG_0111.JPG", thumb: "IMG_0111.JPG", title: "🏰 索菲亚之夜" },
-    { type: "image", src: "IMG_0094.JPG", thumb: "IMG_0094.JPG", title: "🏢 延吉网红墙" },
-    { type: "image", src: "IMG_1706.JPG", thumb: "IMG_1706.JPG", title: "🍔 吃货二人组" },
-    { type: "image", src: "IMG_1630.JPG", thumb: "IMG_1630.JPG", title: "🤪 贴脸搞怪" },
-    { type: "image", src: "IMG_0106.JPG", thumb: "IMG_0106.JPG", title: "🥖 烟囱面包" },
-    { type: "image", src: "7cc58758c70cfc2cf782c499ab83733c.JPG", thumb: "7cc58758c70cfc2cf782c499ab83733c.JPG", title: "🌴 绿野仙踪" },
-    { type: "image", src: "IMG_1705.JPG", thumb: "IMG_1705.JPG", title: "☁️ 暮色屋檐" },
-    { type: "image", src: "IMG_6396.JPG", thumb: "IMG_6396.JPG", title: "🌙 依偎" },
-    { type: "image", src: "ad4021b36efebd298348c46aff6682ca.JPG", thumb: "ad4021b36efebd298348c46aff6682ca.JPG", title: "✌️ 游客打卡" },
-    { type: "image", src: "08f6774600d56dfd73a4fe5bfc130c1c.JPG", thumb: "08f6774600d56dfd73a4fe5bfc130c1c.JPG", title: "😁 你的笑眼" },
-    { type: "image", src: "3a1ad3336d9ad992a6165f76380c5716.JPG", thumb: "3a1ad3336d9ad992a6165f76380c5716.JPG", title: "📸 假笑男孩" },
-    { type: "image", src: "faa0068cc1839e5a3681eda5edd8de4a.JPG", thumb: "faa0068cc1839e5a3681eda5edd8de4a.JPG", title: "👀 呆萌凝视" },
-    { type: "image", src: "dclassic 2024-09-02 193701.614.JPG", thumb: "dclassic 2024-09-02 193701.614.JPG", title: "🚗 在路上" },
-    { type: "image", src: "IMG_1629.JPG", thumb: "IMG_1629.JPG", title: "🏙️ 九龙广场" },
-    { type: "image", src: "IMG_0347.JPG", thumb: "IMG_0347.JPG", title: "🕊️ 湖边海鸥" },
-    { type: "image", src: "first.png", thumb: "first.png", title: "💌 故事开始" },
-    { type: "image", src: "Internet.jpeg", thumb: "Internet.jpeg", title: "🎮 网吧定情" },
-    { type: "image", src: "walk.jpeg", thumb: "walk.jpeg", title: "🌙 月下漫步" },
-    { type: "image", src: "gk.jpeg", thumb: "gk.jpeg", title: "🎓 高考异地" },
-    { type: "image", src: "db.jpeg", thumb: "db.jpeg", title: "❄️ 东北之旅" },
-    { type: "image", src: "lijiang.jpeg", thumb: "lijiang.jpeg", title: "🏔️ 丽江奇遇" },
-    { type: "image", src: "ky.jpeg", thumb: "ky.jpeg", title: "📚 并肩作战" }
+    { type: "video", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/051541c450521edc692e52c9362dea3e.MP4", thumb: "IMG_1630.JPG", title: "💍 笨蛋求婚", caption: "笑场现场记录" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90.jpg", title: "🎂 生日快乐" },
+     { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E8%BF%90%E5%8A%A8%E5%85%AC%E5%9B%AD.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E8%BF%90%E5%8A%A8%E5%85%AC%E5%9B%AD.jpg", title: "⛲️ 体育公园" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E6%89%93%E7%9E%8C%E7%9D%A1.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E6%89%93%E7%9E%8C%E7%9D%A1.jpg", title: "🤠 怒骂玉龙雪山" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E7%B4%A2%E8%8F%B2%E4%BA%9A%E5%A4%A7%E6%95%99%E5%A0%82.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E7%B4%A2%E8%8F%B2%E4%BA%9A%E5%A4%A7%E6%95%99%E5%A0%82.jpg", title: "🏰 索菲亚之夜" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%BB%B6%E5%90%89.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%BB%B6%E5%90%89.jpg", title: "🏢 延吉网红墙" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%90%83%E9%9D%A2%E5%8C%85.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%90%83%E9%9D%A2%E5%8C%85.jpg", title: "🍔 吃货二人组" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/qs.JPG", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/qs.JPG", title: "💌 baby给我写的小情书" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/mosi.JPG", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/mosi.JPG", title: "🦟 小摩斯蛋" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E6%90%9E%E6%80%AA%E4%BA%8C%E4%BA%BA%E7%BB%84.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E6%90%9E%E6%80%AA%E4%BA%8C%E4%BA%BA%E7%BB%84.jpg", title: "🤪 贴脸搞怪" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E7%83%9F%E5%9B%B1%E9%9D%A2%E5%8C%85.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E7%83%9F%E5%9B%B1%E9%9D%A2%E5%8C%85.jpg", title: "🥖 中央大街" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E6%A3%A0%E6%B9%96%E5%85%AC%E5%9B%AD.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E6%A3%A0%E6%B9%96%E5%85%AC%E5%9B%AD.jpg", title: "🌴 棠湖公园" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%B8%BD%E6%B1%9F.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%B8%BD%E6%B1%9F.jpg", title: "☁️ 丽江暮色" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%BE%9D%E5%81%8E.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%BE%9D%E5%81%8E.jpg", title: "🌙 你紧靠我~" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%B8%BD%E6%B1%9F%E5%A3%81%E7%94%BB.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%B8%BD%E6%B1%9F%E5%A3%81%E7%94%BB.jpg", title: "✌️ 双人合照" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%BD%A0%E7%9A%84%E7%AC%91%E8%84%B8.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%BD%A0%E7%9A%84%E7%AC%91%E8%84%B8.jpg", title: "😁 泡面蛋蛋" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%81%87%E7%AC%91%E7%94%B7%E5%AD%A9.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%81%87%E7%AC%91%E7%94%B7%E5%AD%A9.jpg", title: "📸 绵阳之旅" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/baby%E7%9D%A1%E8%A1%A3.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/baby%E7%9D%A1%E8%A1%A3.jpg", title: "👀 萌萌蛋妹儿" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/baby%E5%8D%95%E4%BA%BA.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/baby%E5%8D%95%E4%BA%BA.jpg", title: "🚗 在路上" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%B9%9D%E9%BE%99.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E4%B9%9D%E9%BE%99.jpg", title: "🏙️ 九龙广场" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%B0%8F%E6%B5%B7%E9%B8%A5.jpg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/%E5%B0%8F%E6%B5%B7%E9%B8%A5.jpg", title: "🕊️ 湖边海鸥" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/first.png", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/first.png", title: "💌 故事开始" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/Internet.jpeg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/Internet.jpeg", title: "🎮 网吧定情" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/walk.jpeg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/walk.jpeg", title: "🌙 月下漫步" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/gk.jpeg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/gk.jpeg", title: "🎓 高考异地" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/db.jpeg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/db.jpeg", title: "❄️ 东北之旅" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/lijiang.jpeg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/lijiang.jpeg", title: "🏔️ 丽江奇遇" },
+    { type: "image", src: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/ky.jpeg", thumb: "https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/ky.jpeg", title: "📚 并肩作战" }
 ];
 
 /* --- 逻辑控制 --- */
@@ -117,7 +120,7 @@ function initModeSwitch() {
             els.modeBtn.innerText = "🖼️ 切换模式";
             
             // 切换回 Stardew Valley Overture.mp3
-            switchMusic("Stardew Valley Overture.mp3");
+            switchMusic("https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/Stardew%20Valley%20Overture.mp3");
         } else {
             // === 切换到画廊模式 ===
             els.storyView.classList.add('hidden');
@@ -125,7 +128,7 @@ function initModeSwitch() {
             els.modeBtn.innerText = "📖 返回故事";
             
             // 切换到画廊背景音乐
-            switchMusic("E_lAlba_Verra.mp3");
+            switchMusic("https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/ruby.mp3");
         }
     };
 }
@@ -150,7 +153,7 @@ function switchMusic(src) {
 function startStory() {
     els.cover.classList.add('hidden');
     // 确保开始时播放的是故事音乐
-    switchMusic("Stardew Valley Overture.mp3");
+    switchMusic("https://zyjpicture.oss-cn-beijing.aliyuncs.com/test/Stardew%20Valley%20Overture.mp3");
     // 如果还没播放，尝试播放
     if (els.bgm.paused) {
         els.bgm.play().then(() => els.musicBtn.innerText = "🎵 播放中").catch(console.log);
@@ -174,6 +177,8 @@ function loadQuiz(idx) {
         els.backBtn.classList.remove('hidden');
     } else {
         els.backBtn.classList.add('hidden');
+        document.body.classList.remove('has-sprite');
+
     }
 
     // 重置界面
@@ -243,6 +248,8 @@ function enterMemory() {
         // 显示对话框和立绘
         els.dialogueWrapper.classList.remove('hidden');
         els.sprite.classList.remove('hidden'); // 显示立绘
+        document.body.classList.remove('has-sprite');
+
         
         // 更新讲述者时间
         els.speakerDate.innerText = `(${data.date})`;
@@ -291,6 +298,8 @@ function endStory() {
     els.photoFrame.classList.add('frame-hidden');
     els.dialogueWrapper.classList.remove('hidden');
     els.sprite.classList.remove('hidden');
+    document.body.classList.add('has-sprite');
+
     els.backBtn.classList.add('hidden'); 
     
     // 更新结束语的讲述者信息
