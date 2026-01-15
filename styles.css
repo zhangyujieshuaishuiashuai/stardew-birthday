@@ -18,14 +18,15 @@ body {
     font-family: var(--font-main);
     background-color: var(--color-blue);
     color: var(--color-wood-dark);
-    height: 100vh; overflow: hidden;
+    min-height: 100dvh;
+    overflow: hidden;
     position: relative;
 }
 
 .hidden { display: none !important; }
 
 /* --- 2. 背景 --- */
-.bg-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.bg-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; z-index: -1; pointer-events: none; }
 .sky { height: 60%; background: linear-gradient(to bottom, #62a1d8, #a3d8f5); }
 .mountain {
     height: 20%; background: #4a8a3a;
@@ -56,7 +57,7 @@ body {
     border: 3px solid var(--color-wood-dark);
     color: var(--color-wood-dark);
     padding: 8px 15px;
-    font-family: inherit; font-size: 1rem; font-weight: bold;
+    font-family: inherit; font-size: clamp(0.9rem, 1.6vw, 1rem); font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 0 var(--color-wood-dark);
     transition: transform 0.1s;
@@ -64,29 +65,30 @@ body {
 }
 .pixel-btn:active { transform: translateY(4px); box-shadow: 0 0 0; }
 .pixel-btn.confirm { background: #98fb98; }
-.pixel-btn.big-btn { font-size: 1.5rem; padding: 15px 30px; }
+.pixel-btn.big-btn { font-size: clamp(1.2rem, 3.5vw, 1.5rem); padding: clamp(10px, 2.5vw, 15px) clamp(18px, 5vw, 30px); }
 
 /* 返回按钮样式 */
 .back-btn {
-    position: absolute; top: 70px; left: 20px; 
+    position: absolute; top: calc(70px + env(safe-area-inset-top)); left: 20px; 
     z-index: 500; background: #fff;
     padding: 5px 10px; font-size: 0.9rem;
 }
 
 .header-bar {
-    position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
-    width: 95%; max-width: 800px; z-index: 5000;
+    position: absolute; top: calc(10px + env(safe-area-inset-top)); left: 50%; transform: translateX(-50%);
+    width: min(95%, 800px); z-index: 5000;
     display: flex; justify-content: space-between; align-items: center;
     background: var(--color-cream);
     border: 3px solid var(--color-wood-dark);
     border-radius: 8px; padding: 10px;
     box-shadow: 0 4px 0 rgba(0,0,0,0.2);
 }
-.header-bar h1 { font-size: 1.2rem; margin: 0; }
+.header-bar h1 { font-size: clamp(1rem, 3vw, 1.2rem); margin: 0; }
 
 /* --- 5. 故事模式 --- */
 #story-view {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    min-height: 100dvh;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     z-index: 10;
 }
@@ -97,7 +99,7 @@ body {
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     z-index: 200;
 }
-.pixel-h1 { font-size: 2rem; text-align: center; margin-bottom: 30px; color: var(--color-orange); text-shadow: 2px 2px 0 var(--color-wood-dark); }
+.pixel-h1 { font-size: clamp(1.4rem, 5vw, 2rem); text-align: center; margin-bottom: 30px; color: var(--color-orange); text-shadow: 2px 2px 0 var(--color-wood-dark); }
 
 #quiz-board {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
@@ -115,16 +117,16 @@ body {
 
 /* === 核心修改区：图片展示 === */
 #stage {
-    margin-top: 50px; /* 稍微减小顶部间距，给图片更多垂直空间 */
+    margin-top: clamp(20px, 6vh, 50px); /* 稍微减小顶部间距，给图片更多垂直空间 */
     flex: 1; display: flex; justify-content: center; align-items: center; width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: clamp(10px, 4vh, 20px);
     position: relative; z-index: 50; 
 }
 
 .photo-frame {
     height: auto; width: auto;
-    max-height: 58vh; /* 🔥 从40vh改为58vh，大幅增加图片高度 */
-    max-width: 88vw;  /* 🔥 宽度限制也稍微放宽 */
+    max-height: min(58vh, 58dvh); /* 🔥 从40vh改为58vh，大幅增加图片高度 */
+    max-width: min(88vw, 88dvw);  /* 🔥 宽度限制也稍微放宽 */
     aspect-ratio: 3/4;
     
     border: 6px solid var(--color-wood-dark); 
@@ -160,10 +162,10 @@ body {
 /* 立绘样式 */
 #character-sprite {
     position: absolute;
-    bottom: 20px; 
+    bottom: calc(20px + env(safe-area-inset-bottom)); 
     right: 10px; 
     z-index: 110; 
-    height: 280px; 
+    height: clamp(160px, 30vh, 280px); 
     width: auto;
     pointer-events: none;
     background: transparent !important; 
@@ -182,10 +184,10 @@ body {
 /* 对话框容器 */
 #dialogue-wrapper {
     position: absolute;
-    bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
+    width: min(95%, 600px);
     max-width: 600px;
     z-index: 100;
     display: flex;
@@ -226,7 +228,7 @@ body {
 /* 对话框本身 */
 #dialogue-box {
     width: 100%;
-    height: 120px; 
+    height: clamp(90px, 18vh, 120px); 
     background: var(--color-cream);
     display: flex;
     flex-direction: column;
@@ -237,7 +239,7 @@ body {
     box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
 }
 
-#dialogue-text { font-size: 1.1rem; line-height: 1.6; overflow-y: auto; flex: 1; font-weight: bold; padding: 10px;}
+#dialogue-text { font-size: clamp(0.95rem, 2.8vw, 1.1rem); line-height: 1.6; overflow-y: auto; flex: 1; font-weight: bold; padding: 10px;}
 .arrow-icon { position: absolute; bottom: 10px; right: 15px; animation: bounce 1s infinite; }
 @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 
@@ -247,7 +249,7 @@ body {
     overflow-y: auto; padding-top: 80px; z-index: 20; background: rgba(255,255,255,0.85);
 }
 .gallery-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr);
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px; padding: 10px; max-width: 800px; margin: 0 auto;
 }
 .gallery-item {
@@ -267,6 +269,40 @@ footer { text-align: center; padding: 20px; color: #666; }
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.9); z-index: 10000;
     display: flex; justify-content: center; align-items: center;
+}
+
+@media (max-width: 480px) {
+    body { overflow: hidden; }
+
+    .header-bar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .back-btn { left: 12px; }
+
+    #dialogue-wrapper { width: calc(100% - 20px); }
+
+    #speaker-box {
+        left: 0;
+        margin-left: 10px;
+    }
+
+    .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 360px) {
+    .pixel-btn { padding: 6px 10px; }
+    .header-bar h1 { text-align: center; }
+    #dialogue-text { padding: 8px; }
 }
 .lightbox-content {
     background: var(--color-cream); width: 95%; max-width: 500px;
