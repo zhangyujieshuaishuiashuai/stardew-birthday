@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Stardew Memories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="sky"></div>
+        <div class="clouds-bg"></div>
+        <div class="mountain"></div>
+        <div class="ground"></div>
+    </div>
+    
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+
+    <header class="header-bar">
+        <h1>我们的农场日记</h1>
+        <div class="controls">
+            <button id="toggleMusic" class="pixel-btn">🔇 音乐</button>
+            <button id="toggleMode" class="pixel-btn mode-btn">🖼️ 切换模式</button>
+        </div>
+    </header>
+
+    <section id="story-view">
+        <button id="btn-back" class="pixel-btn back-btn hidden" onclick="prevStoryStep()">⬅️ 上一步</button>
+
+        <div id="story-cover">
+            <h2 class="pixel-h1">HAPPY BIRTHDAY<br>我的农场主</h2>
+            <button class="pixel-btn confirm big-btn" onclick="startStory()">开始回忆旅程</button>
+        </div>
+
+        <div id="quiz-board" class="pixel-box hidden">
+            <div class="board-header" id="quiz-date"></div>
+            <div class="board-content">
+                <p id="quiz-question"></p>
+                <p id="quiz-hint" class="hidden"></p>
+                <p id="quiz-answer" class="hidden"></p>
+            </div>
+            <div class="board-actions" id="quiz-btns"></div>
+        </div>
+
+        <div id="stage">
+            <div class="photo-frame" id="story-frame">
+                <img id="story-img" src="" alt="Memory">
+            </div>
+        </div>
+
+        <div id="character-sprite" class="hidden">
+            <img src="jj.png" alt="猪唧唧">
+        </div>
+
+        <div id="dialogue-wrapper" class="hidden">
+            <div id="speaker-box" class="pixel-box">
+                <span id="speaker-name">猪唧唧</span>
+                <span id="speaker-date"></span>
+            </div>
+            
+            <div id="dialogue-box" class="pixel-box" onclick="nextStoryStep()">
+                <div id="dialogue-text"></div>
+                <div class="arrow-icon">▼</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-view" class="hidden">
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <footer><p>© 2026 Stardew Memories</p></footer>
+    </section>
+
+    <div id="lightbox" class="hidden">
+        <div class="lightbox-content pixel-box">
+            <button id="lbClose" class="pixel-btn close-btn">×</button>
+            <div class="lb-media" id="lbMediaWrapper"></div>
+            <div class="lb-text">
+                <h3 id="lbTitle"></h3>
+                <p id="lbDesc"></p>
+            </div>
+            <div class="lb-nav">
+                <button id="lbPrev" class="pixel-btn">‹</button>
+                <button id="lbNext" class="pixel-btn">›</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgm" loop>
+        <source src="Stardew Valley Overture.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
